@@ -27,7 +27,6 @@
         "views/sale_order.xml",
         "views/account_move.xml",
         "views/stock_picking.xml",
-        "views/account_journal.xml",
         "views/account_payment_mode.xml",
     ],
     "installable": True,
