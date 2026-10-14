@@ -4,11 +4,9 @@
 from odoo import api, fields, models
 
 
-class AccountPaymentMethodLine(models.Model):
-    _inherit = "account.payment.method.line"
+class AccountPaymentMode(models.Model):
+    _inherit = "account.payment.mode"
 
-    # the logic around the 2 following fields has to be implemented
-    # in the connectors (magentoerpconnect, prestashoperpconnect,...)
     days_before_cancel = fields.Integer(
         default=30,
         help="After 'n' days, if the 'Import Rule' is not fulfilled, the "
@@ -19,9 +17,9 @@ class AccountPaymentMethodLine(models.Model):
         default="always",
         required=True,
         help="""
-            - Never: the sales orders using the payment method will never be imported.
-            - Always: the sales orders using the payment method will always be imported.
-            - Paid: the sales orders using the payment method will be imported
+            - Never: the sales orders using the payment mode will never be imported.
+            - Always: the sales orders using the payment mode will always be imported.
+            - Paid: the sales orders using the payment mode will be imported
                     only when they receive a payment on the E-Commerce backend.
         """,
     )

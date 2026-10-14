@@ -12,8 +12,8 @@
     "depends": [
         # odoo
         "stock_delivery",
-        # OCA/bank-payment-alternative
-        "account_payment_base_oca_sale",
+        # OCA/bank-payment
+        "account_payment_sale",
         # OCA/connector
         "connector_base_product",
         # OCA/sale-workflow
@@ -28,7 +28,7 @@
         "views/account_move.xml",
         "views/stock_picking.xml",
         "views/account_journal.xml",
-        "views/account_payment_method_line.xml",
+        "views/account_payment_mode.xml",
     ],
     "installable": True,
 }
